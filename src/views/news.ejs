@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <title>News</title>
+</head>
+<body>
+    
+     <header class="header">
+
+         <div class="header__logo">
+               News Website
+         </div>
+
+         <div class="header__search">
+             <form action="/" method="post">
+                 <input type="text" name="search" placeholder="search for news" required>
+                 <input type="submit" value="Search">
+
+             </form>
+         </div>
+
+     </header>
+
+
+       <div class="wrapper">
+            <div class="news">
+
+
+                        <% articles.articles.forEach((article,index)=>{  %>
+
+                            <a href="/article/<%-article.source.name%>" class="news__card">
+                              <h2><%- article.title%> </h2> 
+                            
+                            </a>
+                            <p><%- article.description%></p>
+
+
+                        <%  }) %>
+
+            </div>
+
+    </div>
+
+
+    
+</body>
+</html>
